@@ -1,3 +1,5 @@
+import { RICKY } from "./DATOS.js";
+
 const padre = document.getElementById('padre'); // necesitas defer en el html
 
 let hijos = '';
@@ -22,4 +24,11 @@ addEventListener('DOMContentLoaded', function(){
       hijos = hijosGuardados
       padre.innerHTML = hijos
     }
+
+  RICKY.results.forEach(item => {
+    const img = document.createElement('img')
+    img.src = item.image
+    padre.appendChild(img)
+  })
+   
 })
